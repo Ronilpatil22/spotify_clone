@@ -1,4 +1,3 @@
-import React from 'react'
 import { assets, songsData } from '../assets/assets'
 
 const Player = () => {
@@ -35,7 +34,6 @@ const Player = () => {
             <img className='w-4' src={assets.speaker_icon}></img>
             <img className='w-4' src={assets.volume_icon}></img>   
             <div className='w-20 bg-slate-50 h-1 rounded'>
-
             </div>
             <img className='w-4' src={assets.mini_player_icon}></img>
             <img className='w-4' src={assets.zoom_icon}></img>
