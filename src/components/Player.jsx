@@ -3,7 +3,7 @@ import { PlayerContext } from '../context/PlayerContext'
 import { useContext } from 'react'
 const Player = () => {
 
-    const {seekBar,track,seekBg,playStatus,play,pause} = useContext(PlayerContext)
+    const {seekBar,track,seekBg,playStatus,play,pause,time} = useContext(PlayerContext)
      
 
   return (
@@ -25,12 +25,12 @@ const Player = () => {
                 <img className='w-4 cursor-pointer' src={assets.loop_icon}></img>
             </div>
             <div className='flex items-center gap-5'>
-                <p>1:06</p>
+                <p>{time.currentTime.minute}:{time.currentTime.second}</p>
                 <div redf={seekBg} className='w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer'>
                     <hr ref={seekBar} className='h-1 border-none w-10 bg-green-800 rounded-full'>
                     </hr>
                 </div>
-                <p>3:20</p>
+                <p>{time.totalTime.minute}:{time.totalTime.second}</p>
             </div>
         </div>
         <div className='hidden lg:flex items-center gap-2 opacity-75'>
